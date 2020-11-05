@@ -1,0 +1,81 @@
+
+<html>
+<head>
+	<title>Heshe Treasure Map</title>
+	<meta charset="utf-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+	
+	<style>
+		#floating-panel {
+			border-radius: 7px;
+			max-width: 1280px;
+			position: absolute;
+			background-color: #fff;
+			padding: 10px 10px;
+			text-align: left;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			}
+	
+		body, .leaflet-container {font-family: 'Lato', sans-serif;}
+		h2 {font-family: 'Bree Serif', serif; color: #7FB62C;}
+		p {font-family: 'Lato', sans-serif; font-size: 10px}
+		form {font-size: 12px;font-family: 'Lato', sans-serif;}
+		
+		div.desc, p.desc {
+			max-width: 1280px;
+			font-size: 12px;}
+			
+		div.desc {
+			overflow-y: scroll; }
+		
+		.custom .leaflet-popup-tip,
+		.custom .leaflet-popup-content-wrapper {
+			max-width: 250px;
+			max-height: 200px;
+			overflow-y: scroll;
+			
+		}
+		
+	
+	</style>
+	
+	
+
+</head>
+<body>
+<p id="demo"></p>
+	
+	<div>
+	<h2>Heshe Treasure Map</h2>
+	<p class="desc" align="justify">The webmap of Heshe is created to help tourists navigate through nearby sites and connecting townships. The webmap presents information about the road map, transportation system and points of interests on the main sites. Background information and photos are indicated for each location. Moreover, suggested itineraries varying from one day trips to three days trips are also made available. This is a project is made possible by the Taiwan Nature Treasure Map Program 2016 of National Taiwan University and Heshe Nature Education Center, supported by the Ministry of Education of Taiwan. <a href="http://treasuremaptw.org/" target="_blank">Website</a></p>
+	<img src="supportedby.png" style="max-width:120px;">
+	</div>
+	
+	<div id="mapid" style="max-width: 1280px; margin: auto; height: 350px"></div>
+	
+	<div id="floating-panel">
+	<p>Suggested route </p>
+	<form id="form1">
+	  <input id="r1" type="radio" class = "tripf" name="trip" value="one"/> One-day Trip<br>
+	  <input id="r2" type="radio" class = "tripf" name="trip" value="two"/> Two-day Trip<br>
+	  <input id="r3" type="radio" class = "tripf" name="trip" value="three"/> Three-day Trip
+	  </form>
+	  
+	  <div class="desc" id="tripdesc" ></div>
+	  </div>
+	  
+
+
+<script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="jsfile-mob.js"></script>
+
+
+</body>
+</html>
